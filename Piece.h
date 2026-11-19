@@ -7,13 +7,14 @@ class Board;
 
 class Piece {
     protected:
+        PieceType type;
         Color color;
         int x;
         int y;
-        bool hasMoved;
+        bool hasMoved = false;
 
     public:
-        Piece(Color color, int x, int y);
+        Piece(PieceType type, Color color, int x, int y);
 
         Color getColor();
 
@@ -24,5 +25,5 @@ class Piece {
         bool getHasMoved();
         char getSymbol();
 
-        bool isValidMove(Move move, Board board);
+        bool virtual isValidMove(Move move, Board board);
 };

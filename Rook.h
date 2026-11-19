@@ -5,8 +5,8 @@
 
 class Rook : public Piece {
     public:
-        using Piece::Piece;
+        Rook(Color color, int x, int y);
 
         char getSymbol();
-        bool isValidMove(Move move, Board board);
+        bool isValidMove(Move move, Board board) override;
 };

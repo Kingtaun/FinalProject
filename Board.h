@@ -13,6 +13,8 @@ class Board {
         Board();
 
         void setupInitialPosition();
+        void fillBackRow(int row, Color color);
+        void fillPawnRow(int row, Color color);
 
         bool movePiece(Move move);
         Piece* getPiece(int x, int y);
